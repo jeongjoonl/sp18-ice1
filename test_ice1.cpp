@@ -28,7 +28,19 @@ int main(int argc, char *argv[])
 	CalcFramer framer;
 	// put any test code here that uses your framer
 
+    cout << "File read: " << endl;
 	cout << test_str << endl;
+
+    framer.append(test_str);
+
+    while (framer.hasMessage())
+    {
+        string instr = framer.topMessage();
+
+        cout << "Frame message: " << instr << endl;
+
+        framer.popMessage();
+    }
 
 	return 0;
 }

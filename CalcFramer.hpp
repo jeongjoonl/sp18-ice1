@@ -21,6 +21,8 @@ public:
 
 protected:
 	// PUT ANY FIELDS/STATE HERE
+    const std::string mDelim = "\r\n";
+    std::string mFrame;
 };
 
 #endif // CALCFRAMER_HPP
